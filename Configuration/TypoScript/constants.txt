@@ -1,0 +1,190 @@
+############################
+### CUSTOM SUBCATEGORIES ###
+###########################
+# customsubcategory=310=Région
+# customsubcategory=311=Département
+# customsubcategory=312=CC/Agglo
+# customsubcategory=313=Commune
+# customsubcategory=314=Plan du site
+# customsubcategory=315=Flux RSS News
+# customsubcategory=316=Rubrique 1
+# customsubcategory=317=Rubrique 2
+# customsubcategory=318=Rubrique 3
+# customsubcategory=319=Rubrique 4
+# customsubcategory=320=Rubrique 5
+# customsubcategory=321=Rubrique 6
+# customsubcategory=322=Rubrique 7
+# customsubcategory=323=Rubrique 8
+# customsubcategory=324=Rubrique 9
+
+
+
+##############
+### CONFIG ###
+##############
+config {
+	# cat=t3 cancon: basic/150/010; type=string; label=Domaine du site Internet
+	baseURL = http://example.com
+	#cat=t3 cancon: basic/150/011; type=int; label=GoogleSiteMap: Uid de la page Root pour le fonctionnement de Google SiteMap
+	googlesitemap.rootUid = 1
+    # cat=t3 cancon: basic/enable/010; type=boolean; label=RealUrl: Activer RealUrl
+    realurl = 0	
+	
+}
+
+##############
+### PAGE   ###
+##############
+
+page{
+	fluidtemplate{
+		templateRootPath = EXT:t3_cancon/Resources/Private/Templates/Page/
+		layoutRootPath = EXT:t3_cancon/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:t3_cancon/Resources/Private/Partials/Page/
+	
+	}
+	
+	# Uid de la page contenant le bandeau
+	#cat=t3 cancon: basic/150/012; type=int; label=Bandeau: Uid de la page Bandeau
+	bandeau = 1
+	
+	#Paramètre des liens de la zone Localisation
+	localisation {
+		#cat=t3 cancon: Localisation/310/010; type=string; label= Région Url: Adresse web de la région
+        region_url = http://laregion-alpc.fr/
+		#cat=t3 cancon: Localisation/310/011; type=string; label= Région Title: Titre du lien de la région
+		region_title = vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes
+		#cat=t3 cancon: Localisation/310/012; type=string; label= Région Text: texte affiché pour la région
+		region_text = Nouvelle-Aquitaine
+		#cat=t3 cancon: Localisation/311/010; type=string; label= Département Url: Adresse Web du département
+		departement_url = http://www.lotetgaronne.fr/
+		#cat=t3 cancon: Localisation/311/011; type=string; label= Département Title: Titre du lien du département
+		departement_title = vers le site du Conseil Départemental de Lot et Garonne
+		#cat=t3 cancon: Localisation/311/012; type=string; label= Département Text: texte affiché pour le département
+		departement_text = Lot-et-Garonne
+		#cat=t3 cancon: Localisation/312/010; type=string; label= CC/Agglo Url: Adresse web de la communauté de communes/agglo
+	    cc_url = http://www.ccbastides47.com/
+		#cat=t3 cancon: Localisation/312/011; type=string; label= CC/Agglo Title: Titre du lien de la communauté de communes/agglo
+		cc_title = vers le site de Bastides en Haut-Agenais Périgord
+		#cat=t3 cancon: Localisation/312/012; type=string; label= CC/Agglo Text: texte affiché pour la communauté de communes/agglo
+		cc_text = Bastides en Haut-Agenais Périgord 
+		#cat=t3 cancon: Localisation/313/010; type=string; label= Commune Url: Adresse web de la commune
+	    commune_url = http://www.cancon.fr/
+		#cat=t3 cancon: Localisation/313/011; type=string; label= Commune Title: Titre du lien de la commune
+	    commune_title = vers l'accueil site de Cancon
+		#cat=t3 cancon: Localisation/313/012; type=string; label= Commune Text: texte affiché pour la commune
+	    commune_text =  Cancon
+    }  
+		
+	theme{
+		headertopsection{
+			# cat=t3 cancon: basic/enable/011; type=boolean; label=Zone Bienvenue/Localisation: Activer la zone Bienvenue et Localisation
+			enable = 1
+		}
+		footersitemap {
+			# cat=t3 cancon: basic/enable/012; type=boolean; label=Sitemap: Activer l'affichage du plan du site dans le pied de page
+			enable = 1
+		}
+		# cat=t3 cancon: basic/enable/013; type=boolean; label=Rubrique en couleurs: Activer la couleur pour les rubriques
+		menucouleur = 0
+	}
+	
+	bienvenue {
+		# cat=t3 cancon: basic/160/010; type=string; label=Le message de bienvenue
+		msg = Bienvenue sur le site officiel de la commune de Cancon
+    }
+      
+	#Paramètre du champ recherche	
+	search {
+		# cat=t3 cancon: Recherche/enable/010; type=boolean; label=Position Champ Recherche: Activer Position Droite (bandeau par défaut)
+		positionDroite = 0
+		
+		#cat=t3 cancon: Recherche/150/010; type=int; label=page Recherche: Uid de la page Recherche
+		settings.PID = 1
+
+		#cat=t3 cancon: Recherche/160/010; type=string; label=Label Champ Recherche: Titre au dessus du moteur de recherche (laisser vide pour ne rien avoir):
+		defaultInputLabel =
+
+		#cat=t3 cancon: Recherche/160/011; type=string; label= Placeholder du champ recherche
+		defaultInputValue = Saisir votre recherche
+
+		#cat=t3 cancon: Recherche/160/012; type=string; label= Label du bouton recherche
+		defaultSubmitLabel = Rechercher sur tout le site
+
+		#cat=t3 cancon: Recherche/160/013; type=string; label= Texte du bouton recherche:
+		defaultSubmitValue = <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+	}
+	
+	# Copyright du site
+	theme {
+	 # cat=t3 cancon: basic/160/011; type=string; label=Copyright Text: Texte affiché pour la zone Copyright
+	copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
+	}
+	
+	#Paramètre des liens en pied de page
+	footer {
+		# cat=t3 cancon: basic/166/010; type=string; label=Dossiers Uid: Uid des dossiers contenant des sous-pages à afficher en pied de page (séparé par des virgules)
+		navdir = 
+		# cat=t3 cancon: basic/166/011; type=boolean; label=Hors Menu: Inclure ou non les pages hors menu
+		notinmenu = 1
+		# cat=t3 cancon: basic/166/012; type=string; label=Exclusion: Uid des pages à exclure du pied de page (séparé par des virgules)
+		excludelist = 133,134 
+	}
+	
+	# Paramètre pour le plan de site
+	sitemapnav{
+		# cat=t3 cancon: basic/314/010; type=string; label=Niveau: Nombre de level à prendre en compte
+		levels = 3
+		# cat=t3 cancon: basic/314/011; type=string; label=Exclusion: Uid des pages à exclure (séparé par des virgules)
+		excludelist = 33 
+  }
+  
+   # Paramètre pour le logo
+  	logo {
+		# cat=t3 cancon: basic/110/100; type=string; label=Logo: Laisser vide pour utiliser le titre du site à la place d'une image
+	    file = EXT:t3_cancon/Resources/Public/Images/logo.png
+		# cat=t3 cancon: basic/110/120; type=int+; label=Hauteur: L'image ne sera pas redimensionnée!
+	    height = 90
+	    # cat=t3 cancon: basic/110/130; type=int+; label=Largeur: L'image ne sera pas redimensionnée!
+	    width = 220
+		# cat=t3 cancon: basic/110/140; type=string; label=Alternative text: Texte de l'attribut alt de l'image (par défaut: "<website title> logo")
+	    alt = Cancon
+		# cat=t3 cancon: basic/110/140; type=boolean; label=Position: Position du logo à gauche du bandeau ou superposé (par défaut: à gauche)
+		positionGauche = 1
+	} 
+
+	# Paramètre pour le flux RSS des actualités
+	newsrss{
+		# cat=t3 cancon: News(Flux RSS)/315/010; type=string; label=Copyright
+		copyright = CDG47
+		# cat=t3 cancon: News(Flux RSS)/315/011; type=int; label=Stockage Uid: Identifiant du dossier de stockage des actualités
+		startingpoint = 1
+		# cat=t3 cancon: News(Flux RSS)/315/012; type=int; label=Page détail: Identifiant de la page détail des actualités
+		detailPid = 1
+		# cat=t3 cancon: News(Flux RSS)/315/013; type=string; label=Titre: Titre du flux RSS
+		title = Actualités
+		# cat=t3 cancon: News(Flux RSS)/315/014; type=string; label=Générateur: Texte spécifiant la provenance du Flux RSS
+		generator = Site Internet
+		# cat=t3 cancon: News(Flux RSS)/315/015; type=int+; label=Limite: Nombre d'actualités dans le flux
+		limit = 30
+		# cat=t3 cancon: News(Flux RSS)/315/016; type=string; label=Catégories: Les catégories de news à prendre en compte
+		categories = 9
+		# cat=t3 cancon: News(Flux RSS)/315/017; type=options[Tout=,Montrer les catégories sélectionnées(Ou)=or,Ne pas montrer les catégories sélectionnées(Ou)=notor,Montrer avec les catégories sélectionnées(Et)=and,Ne pas montrer avec les catégories sélectionnées(Et)=notand]; label= Conjonction des catégories: Méthode de prise en compte des catégories
+		categoryConjunction = 			
+	}
+}
+
+#### BOOTSTRAP LESS CONSTANTS ####
+##################################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Bootstrap/constants.txt">
+
+##########################################
+### BOOTSTRAP PACKAGE CONTENT ELEMENTS ###
+##########################################
+plugin.bootstrap_package_contentelements {
+	view{
+	   templateRootPath = EXT:t3_cancon/Resources/Private/Templates/ContentElements/
+	   layoutRootPath = EXT:t3_cancon/Resources/Private/Layouts/ContentElements/
+	   partialRootPath  = EXT:t3_cancon/Resources/Private/Partials/ContentElements/
+	}
+}

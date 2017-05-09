@@ -1,0 +1,13 @@
+		<f:if condition="{footernavigation}">
+            <nav class="" role="footernav">
+                <ul class="nav nav-pills">
+                    <f:for each="{footernavigation}" as="footernavigationItem">
+                        <li class="{f:if(condition: footernavigationItem.active, then:'active')}">
+                           <f:link.page pageUid="{footernavigationItem.data.uid}" title="{footernavigationItem.title}">
+                               {footernavigationItem.title}
+                            </f:link.page>
+                          </li>                       
+                    </f:for>
+                </ul>
+            </nav>
+        </f:if>

@@ -1,0 +1,59 @@
+ <f:if condition="{sitemapnavigation}">
+            <nav class="sitewide-footer">
+                <ul class="menu row">
+                    <f:for each="{sitemapnavigation}" as="sitemapnavigationItem">
+                            <f:if condition="{sitemapnavigationItem.children}">
+                                <f:then>
+                                  <li class="menu-level-1 {f:if(condition: sitemapnavigationItem.active, then:'active')} col-md-2">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        {sitemapnavigationItem.title}
+                                    </a>
+                                    <ul class="menu">
+                                        <f:for each="{sitemapnavigationItem.children}" as="child" iteration="childIteration">
+                                            <f:if condition="{child.data.isSpacer}">
+                                                <f:then> 
+                                                   
+                                                </f:then>
+                                                <f:else>
+                                                    <li class="menu-level-2 {f:if(condition: child.active, then:'active')}">
+                                                        <f:link.page pageUid="{child.data.uid}" title="{child.title}">
+                                                            <strong>{child.title}</strong>
+                                                        </f:link.page>
+                                                    </li>
+                                                    <f:for each="{child.children}" as="childL3" iteration="child2Iteration">
+                                                         <f:if condition="{child2Iteration.isFirst}">
+                                                            <f:then>
+                                                               <li>
+                                                                <ul class="menu">
+                                                            </f:then> 
+                                                         </f:if>                                                               
+                                                         <li class="menu-level-3 {f:if(condition: childL3.active, then:'active')}">
+                                                           <f:link.page pageUid="{childL3.data.uid}" title="{childL3.title}">
+                                                                {childL3.title}
+                                                           </f:link.page>
+                                                         </li>
+                                                         <f:if condition="{child2Iteration.isLast}">
+                                                            <f:then>
+                                                               </ul>
+                                                                 </li>
+                                                            </f:then>
+                                                         </f:if>                          
+                                                    </f:for>
+                                                </f:else>
+                                            </f:if>                                                                                                             
+                                        </f:for>
+                                        </ul>
+                                      </li>
+                                </f:then>
+                                <f:else>
+                                  <li class="menu-level-1 {f:if(condition: sitemapnavigationItem.active, then:'active')}">
+                                    <f:link.page pageUid="{sitemapnavigationItem.data.uid}" title="{sitemapnavigationItem.title}">
+                                        {sitemapnavigationItem.title}
+                                    </f:link.page>
+                                  </li>
+                                </f:else>
+                            </f:if>
+                    </f:for>
+                </ul>
+            </nav>
+        </f:if>

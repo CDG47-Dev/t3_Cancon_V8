@@ -1,0 +1,17 @@
+#################
+#### TCEFORM ####
+#################
+TCEFORM {
+ tt_content {
+	section_frame {
+		addItems{
+		31 = No Frame
+		22 = Well Blue
+		23 = Jumbotron Light
+		40 = Bloc + Entête en couleur
+		41 = Bloc avec encadrement de couleur
+		}
+	}
+  }
+}
+

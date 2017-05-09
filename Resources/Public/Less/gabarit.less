@@ -1,0 +1,227 @@
+/*
+ * Add Frame Style
+ * --------------------------------------------------
+ */
+
+.frame {
+   &.well{
+     &.blue{
+       background: rgba(74, 124, 190, 0.4);
+     }
+   }
+   &.jumbotron{
+     padding:10px 10px;  
+     &.light{
+       background: rgba(255, 135, 0, 0.3);
+       color : black;
+     }
+     p{
+       font-size:0.9em;
+     }
+   }
+
+}
+
+.no-frame{
+    margin-top :0;
+    margin-bottom:0;
+ }
+ 
+.bloc-header {
+    border: 1px solid grey;
+    & > .bloc-header3{
+      background-color: black;
+      color: white;
+    }
+    & > .bloc-header3::after {
+    background-color: @bloc-header-color;
+    content: "";
+    display: inline-block;
+    float: right;
+    height: 27px;
+    width: 2%;
+  }
+}
+
+.bloc-encadre{
+	border: 0.2em solid @bordercadre;
+	& > h1,
+	& >	h2,
+	& >	h3,
+	& >	h4,
+	& >	h5,
+	& >	h6 {
+			border-bottom: 0.2em solid @bordercadre;
+			text-align: center;
+			font-style: italic;
+			font-weight: bold;
+		}
+}
+
+/*
+ * Background Style
+ * --------------------------------------------------
+ */
+.bg-effet {
+    background: @bodyBackground;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+ 
+/*
+ * Header Top
+ * --------------------------------------------------
+ */
+ 
+header.wrapper > .container:first-child {
+    border-radius: @border-radius-top;
+    border-top: 1px solid @border-color;
+    margin-top: 10px;
+    padding-top: 5px;
+	box-shadow: 0 0 10px -6px @box-shadow;
+}
+
+header.wrapper > .bandeau:first-child{
+   padding-top: 0px;
+   & .carousel-inner{
+		& > .item{
+		  border-radius: @border-radius-top;
+		}
+   }
+}
+ 
+/*
+ * Bandeau Style
+ * --------------------------------------------------
+ */
+
+.bandeau{
+    padding: 0;
+	position: relative;
+	min-height: @bandeauHeight;
+   .carousel-inner > .item{
+       height: @bandeauHeight;
+    }
+  .logo-fix {
+		display: inline-block;
+		height: @bandeauHeight;
+		line-height: @bandeauHeight;
+		width: 100%;
+		text-align: center;
+	} 
+	.logo-sup {
+		left: @logoPosX;
+		position: absolute;
+		text-align: center;
+		top: @logoPosTop;
+		bottom: @logoPosBottom;
+		width: @logoZoneWidth;
+		z-index: 1000;
+	}	
+}
+
+/*
+ * Localisation Style
+ * --------------------------------------------------
+ */
+
+.localisation{
+  .navbar-nav > li > a{
+      padding: 0 0 0 2px;
+   }
+   ul{
+      float:right;
+   }
+}
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+footer{
+ margin-bottom:10px;
+ section{
+  &.footer-section{
+    background: @footer-gradient1;
+    background: -moz-linear-gradient(270deg, @footer-gradient1 30%, @footer-gradient2 70%);
+    background: -webkit-linear-gradient(270deg,@footer-gradient1 30%, @footer-gradient2 70%);
+    background: -o-linear-gradient(270deg, @footer-gradient1 30%, @footer-gradient2 70%);
+    background: -ms-linear-gradient(270deg, @footer-gradient1 30%, @footer-gradient2 70%);
+    background: linear-gradient(360deg, @footer-gradient1 30%, @footer-gradient2 70%);
+    text-align: center;
+    nav{
+       display: inline-block;
+       
+    }
+  }
+  &.meta-section{
+    background: @footer-bottom;
+	border-radius: @border-radius-bottom;
+  }
+ }
+
+}
+
+/*
+ * Menu Top
+ * --------------------------------------------------
+ */
+.navbar-top{
+   nav{
+     background: @navbar-gradient1 ;
+     background: -moz-linear-gradient(90deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
+     background: -webkit-linear-gradient(90deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
+     background: -o-linear-gradient(90deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
+     background: -ms-linear-gradient(90deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
+     background: linear-gradient(180deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
+   }
+   form{
+	 margin-top: @navbar-height / 2;
+   }
+}
+
+@media (min-width: 992px) {
+ .navbar-top{
+	 .navbar-main {
+	   float: left;
+	  }
+  }
+} 
+
+
+/*
+ * Bordure Page
+ * --------------------------------------------------
+ */
+.wrapper > .container{
+   border-left : 1px solid @border-color;
+   border-right: 1px solid @border-color;
+   box-shadow: 4px 0 6px -6px @box-shadow , -4px 0 6px -6px @box-shadow;
+   background: @background-container;
+}
+
+footer.wrapper > .container {
+	border-radius: @border-radius-bottom;
+    border-bottom: 1px solid @border-color;
+	box-shadow: 0px 6px 6px -6px @box-shadow;
+    padding: 0;
+}
+
+header + div.wrapper > .container{
+    padding: 0;
+}
+
+
+/*
+ * Champ de recherche
+ * --------------------------------------------------
+ */
+
+.search-right {
+    margin-top: 15px;
+    text-align: center;
+}

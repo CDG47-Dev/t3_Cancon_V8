@@ -1,0 +1,306 @@
+plugin.bootstrap_package {
+    settings {
+        less {
+              #cat=t3 cancon: CSS/color/010; type=string; label=Menu Couleur 1: Couleur 1 du degradé
+			  navbar-gradient1 = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS/color/011; type=string; label=Menu Couleur 2: Couleur 2 du degradé
+              navbar-gradient2 = rgb(152, 133, 169)
+			  
+			  #cat=t3 cancon: CSS/typo/010; type=string; label=Taille de base de la Font
+              font-size-base = 14px
+			  
+			  #cat=t3 cancon: CSS/dims/010; type=string; label=Hauteur du menu : Attention line-height: round(@navbar-height*2)
+              navbar-height = 30px
+			  
+			  #cat=t3 cancon: CSS/dims/011; type=string; label=Hauteur du bandeau : Fixe la hauteur pour .carousel-inner > .item
+              bandeauHeight = 300px
+			  
+			  #cat=t3 cancon: CSS/color/012; type=string; label=Footer Couleur 1: Couleur 1 du degradé
+              footer-gradient1 = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS/color/013; type=string; label=Footer Couleur 2: Couleur 2 du degradé
+              footer-gradient2 = rgb(152, 133, 169)
+			  
+			  #cat=t3 cancon: CSS/color/014; type=string; label=Footer Couleur du bas: Couleur de la partie Copyright
+              footer-bottom = rgb(152, 133, 169)
+			  
+			  #cat=t3 cancon: CSS/color/015; type=string; label= Couleur de l'arrière plan
+			  bodyBackground = rgb(242, 242, 242)
+			  
+			  #cat=t3 cancon: CSS/dims/012; type=string; label= Coins Arrondis Bas: taille des coins arrondis en bas du site
+			  border-radius-bottom = 0 0 10px 10px
+			  
+			  #cat=t3 cancon: CSS/dims/013; type=string; label= Coins Arrondis Haut: taille des coins arrondis en haut du site
+			  border-radius-top = 10px 10px 0 0
+			  
+			  #cat=t3 cancon: CSS/color/016; type=string; label= Couleur Effet Ombre : ombre portée du site
+			  box-shadow = rgba(50, 50, 50, 0.75)
+			  
+			  #cat=t3 cancon: CSS/color/017; type=string; label= Couleur des bordures : bordure du site
+			  border-color = black
+			  
+			  #cat=t3 cancon: CSS/color/018; type=string; label= Couleur de fond : Couleur de fond pour les pages du site			  
+			  background-container = white
+			  
+			  #cat=t3 cancon: CSS/colors/019; type=string; label= Couleur Bar
+			  mainmenu-bar-bg = #333333	
+
+			  #cat=t3 cancon: CSS/colors/020; type=string; label= Couleur Frame Bloc + Entête: Couleur par défaut pour la zone en couleur du style de la Frame Bloc + Entête
+			  bloc-header-color = red
+			  
+			  #cat=t3 cancon: CSS/colors/021; type=string; label= Couleur Frame Encadrement: Couleur par défaut pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  bordercadre = rgba(133, 96, 168, 1)			  
+			  
+			  #cat=t3 cancon: CSS/dims/014; type=string; label= Coins Arrondis Menu: permet de faire des onglets avec coins arrondis pour le menu principal
+			  border-radius-mainmenu = 0
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/010; type=string; label= Couleur Lien Menu Principal			  
+			  mainmenu-link = white
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/011; type=string; label= Couleur Lien Sous-Menu	
+			  mainmenu-sub-link = white
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/012; type=string; label= Couleur Lien Hover	
+			  mainmenu-sub-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/013; type=string; label= Background Sous-Menu Hover: Couleur du sous-menu Hover	
+			  mainmenu-sub-link-hover-bg = #e8e8e8
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/014; type=string; label= Couleur1 Sous-Menu Hover: Couleur 1 dégradé background du sous-Menu Hover
+			  mainmenu-sub-link-hover-gd1 = #f5f5f5
+			  
+			  #cat=t3 cancon: CSS Rubriques/color/015; type=string; label= Couleur2 Sous-Menu Hover: Couleur 2 dégradé background du sous-Menu Hover			  
+			  mainmenu-sub-link-hover-gd2 = #e8e8e8
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/010; type=string; label= Background
+			  mainmenu0-bg = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/010; type=string; label= Background
+			  mainmenu1-bg = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/010; type=string; label= Background
+			  mainmenu2-bg = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/010; type=string; label= Background
+			  mainmenu3-bg = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/010; type=string; label= Background
+			  mainmenu4-bg = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/010; type=string; label= Background
+			  mainmenu5-bg = rgba(239, 201, 76, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/010; type=string; label= Background
+			  mainmenu6-bg = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/010; type=string; label= Background
+			  mainmenu7-bg = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/010; type=string; label= Background
+			  mainmenu8-bg = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/011; type=string; label= Bordure
+			  mainmenu0-border = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/011; type=string; label= Bordure	  
+			  mainmenu1-border = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/011; type=string; label= Bordure		  
+			  mainmenu2-border = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/011; type=string; label= Bordure		  
+			  mainmenu3-border = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/011; type=string; label= Bordure
+			  mainmenu4-border = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/011; type=string; label= Bordure		  
+			  mainmenu5-border = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/011; type=string; label= Bordure		  
+			  mainmenu6-border = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/011; type=string; label= Bordure		  
+			  mainmenu7-border = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/011; type=string; label= Bordure		  
+			  mainmenu8-border = rgb(133, 96, 168)	
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/012; type=string; label= Background Sous-Menu
+			  mainmenu0-dropdown-bg = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/012; type=string; label= Background Sous-Menu
+			  mainmenu1-dropdown-bg = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/012; type=string; label= Background Sous-Menu
+			  mainmenu2-dropdown-bg = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/012; type=string; label= Background Sous-Menu
+			  mainmenu3-dropdown-bg = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/012; type=string; label= Background Sous-Menu			  
+			  mainmenu4-dropdown-bg = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/012; type=string; label= Background Sous-Menu
+			  mainmenu5-dropdown-bg = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/012; type=string; label= Background Sous-Menu
+			  mainmenu6-dropdown-bg = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/012; type=string; label= Background Sous-Menu
+			  mainmenu7-dropdown-bg = rgb(133, 96, 168)
+
+			  #cat=t3 cancon: CSS Rubriques/324/012; type=string; label= Background Sous-Menu			  
+			  mainmenu8-dropdown-bg = rgb(133, 96, 168)	
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/013; type=string; label= Couleur des liens de la page
+			  rubrique0-link = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/014; type=string; label= Couleur des liens au survol
+			  rubrique0-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique0-bordercadre = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique0-bloc-header-color = rgba(133, 96, 168, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/316/017; type=string; label= Couleur des titres h1-h6
+			  rubrique0-headings = rgba(133, 96, 168, 1)
+
+			  #cat=t3 cancon: CSS Rubriques/317/013; type=string; label= Couleur des liens de la page
+			  rubrique1-link = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/014; type=string; label= Couleur des liens au survol
+			  rubrique1-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique1-bordercadre = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique1-bloc-header-color = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/317/017; type=string; label= Couleur des titres h1-h6
+			  rubrique1-headings = rgba(66, 139, 202, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/013; type=string; label= Couleur des liens de la page
+			  rubrique2-link = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/014; type=string; label= Couleur des liens au survol
+			  rubrique2-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique2-bordercadre = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique2-bloc-header-color = rgba(223, 45, 45, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/318/017; type=string; label= Couleur des titres h1-h6
+			  rubrique2-headings = rgba(223, 45, 45, 1)	
+
+			  #cat=t3 cancon: CSS Rubriques/319/013; type=string; label= Couleur des liens de la page
+			  rubrique3-link = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/014; type=string; label= Couleur des liens au survol
+			  rubrique3-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique3-bordercadre = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique3-bloc-header-color = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/319/017; type=string; label= Couleur des titres h1-h6
+			  rubrique3-headings = rgba(98, 170, 68, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/013; type=string; label= Couleur des liens de la page
+			  rubrique4-link = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/014; type=string; label= Couleur des liens au survol
+			  rubrique4-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique4-bordercadre = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique4-bloc-header-color = rgba(201, 95, 65, 1)
+			  
+			  #cat=t3 cancon: CSS Rubriques/320/017; type=string; label= Couleur des titres h1-h6
+			  rubrique4-headings = rgba(201, 95, 65, 1)	
+
+			  #cat=t3 cancon: CSS Rubriques/321/013; type=string; label= Couleur des liens de la page			  
+			  rubrique5-link = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/014; type=string; label= Couleur des liens au survol
+			  rubrique5-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique5-bordercadre = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique5-bloc-header-color = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/321/017; type=string; label= Couleur des titres h1-h6
+			  rubrique5-headings = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/013; type=string; label= Couleur des liens de la page
+			  rubrique6-link = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/014; type=string; label= Couleur des liens au survol
+			  rubrique6-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique6-bordercadre = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique6-bloc-header-color = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/322/017; type=string; label= Couleur des titres h1-h6
+			  rubrique6-headings = rgb(133, 96, 168)	
+
+			  #cat=t3 cancon: CSS Rubriques/323/013; type=string; label= Couleur des liens de la page
+			  rubrique7-link = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/014; type=string; label= Couleur des liens au survol
+			  rubrique7-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique7-bordercadre = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique7-bloc-header-color = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/323/017; type=string; label= Couleur des titres h1-h6
+			  rubrique7-headings = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/013; type=string; label= Couleur des liens de la page
+			  rubrique8-link = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/014; type=string; label= Couleur des liens au survol
+			  rubrique8-link-hover = #333333
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/015; type=string; label= Couleur Frame Encadrement: Couleur pour la zone en couleur du style de la Frame Bloc avec encadrement de couleur
+			  rubrique8-bordercadre = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/016; type=string; label= Couleur Frame Bloc + Entête: Couleur pour la zone en couleur du style de la Frame Bloc + Entête
+			  rubrique8-bloc-header-color = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS Rubriques/324/017; type=string; label= Couleur des titres h1-h6
+			  rubrique8-headings = rgb(133, 96, 168)
+			  
+			  #cat=t3 cancon: CSS/dims/015; type=string; label= Largeur Zone Logo (mode superposé) : 100% pour centrer le logo sinon mettre la largeur du logo (ex: 300px)
+			  logoZoneWidth = 100%
+			  
+			  #cat=t3 cancon: CSS/dims/016; type=string; label= Position Gauche Logo (mode superposé): position par rapport au bord gauche de la zone bandeau (mettre 0 pour le mode superposé)
+			  logoPosX = 0
+			  
+			  #cat=t3 cancon: CSS/dims/017; type=string; label= Position Top Logo (mode superposé): position par rapport au bord haut du bandeau (mettre none si position par rapport au bas est préférée)
+			  logoPosTop = 90px
+			  
+			  #cat=t3 cancon: CSS/dims/018; type=string; label= Position Bottom Logo (mode superposé): position par rapport au bord bas du bandeau (mettre none si position par rapport au haut est préférée)
+			  logoPosBottom = none
+			  
+             }
+    }
+}

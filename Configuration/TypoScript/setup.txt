@@ -1,0 +1,230 @@
+config {
+    // Language Settings
+    sys_language_uid = 0
+    sys_language_overlay = 1
+    sys_language_mode = content_fallback
+    language = fr
+    locale_all = fr_FR.UTF-8
+    htmlTag_setParams = lang="fr" dir="ltr" class="no-js"
+
+	//Search Settings
+	index_enable = 1
+    index_externals = 1
+	
+	//Cible lien externe
+	extTarget = _blank
+	
+    //Realurl
+    tx_realurl_enable = {$config.realurl}
+
+	//Domaine
+	baseURL = {$config.baseURL}
+
+}
+
+page = PAGE
+page{
+
+	10 = FLUIDTEMPLATE
+    10 {
+		templateName = TEXT
+        	templateName.stdWrap.cObject = CASE
+        	templateName.stdWrap.cObject{			
+            		pagets__default_subnav_left_3columns = TEXT
+            		pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
+      
+        	}
+		variables {
+			#copyright
+			themeCopyright= TEXT
+			themeCopyright.value = {$page.theme.copyright.enable}
+			themeCopyrightText = COA
+			themeCopyrightText{
+				10 = TEXT
+				10{
+					data = date:U
+					strftime = %Y
+					wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
+				}
+			}		 
+		}
+			
+				
+		##########################
+		### DATA PREPROCESSING ###
+		##########################
+		dataProcessing {
+			50 = BK2K\BootstrapPackage\DataProcessing\MenuProcessor
+			50 {
+				special = directory
+				special.value = {$page.footer.navdir}
+				includeNotInMenu = {$page.footer.notinmenu}
+				excludeUidList = {$page.footer.excludelist}
+				as = footernavigation
+			}
+			
+			60 = BK2K\BootstrapPackage\DataProcessing\MenuProcessor
+			60 {
+				levels = {$page.sitemapnav.levels}
+				excludeUidList = {$page.sitemapnav.excludelist}
+				as = sitemapnavigation
+			}      
+		}
+		#################
+		### VARIABLES ###
+		#################	
+		 variables {
+			 showHeaderTop = TEXT
+			 showHeaderTop.value = {$page.theme.headertopsection.enable}	
+			 showLogoLeft = TEXT
+			 showLogoLeft.value = {$page.logo.positionGauche}
+			 showSearchRight = TEXT
+			 showSearchRight.value = {$page.search.positionDroite}
+			 showSitemapFooter = TEXT
+			 showSitemapFooter.value = {$page.theme.footersitemap.enable}			 
+			 
+		 }		
+	}
+	  
+	templateRootPath{
+		0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+		1 = EXT:t3_cancon/Resources/Private/Templates/Page/
+		2 = {$page.fluidtemplate.templateRootPath}
+	}
+     	layoutRootPath{
+		0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+		1 = EXT:t3_cancon/Resources/Private/Layouts/Page/
+		2 = {$page.fluidtemplate.layoutRootPath}		
+	}
+	
+    	partialRootPath{
+		0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+		1 = EXT:t3_cancon/Resources/Private/Partials/Page/
+		2 = {$page.fluidtemplate.partialRootPath}
+	}
+	
+	includeCSS {
+		gabarit = EXT:t3_cancon/Resources/Public/Less/gabarit.less
+		gabarit.title = CSS
+		personnalisation = EXT:t3_cancon/Resources/Public/Less/personnalisation.less
+		personnalisation.title = CSS
+		personnalisation.if.isTrue = {$page.theme.menucouleur}
+		
+	}	
+	
+}	
+
+	#bienvenue
+	lib.bienvenue= TEXT
+	lib.bienvenue.wrap =<p>|</p>
+	lib.bienvenue.value= {$page.bienvenue.msg}
+
+
+	#localisation
+	lib.localisation = TEXT
+	lib.localisation.wrap =<div class="header-links"><ul class="nav navbar-nav">|</ul></div>
+	lib.localisation.value(
+		<li>
+		  <a target="_blank" title="vers le site de l'Union européenne" href="http://europa.eu/index_fr.htm">
+			<span class="hidden-sm hidden-xs">
+			  Europe
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="vers le site France.fr" href="http://www.france.fr">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="France"></i>
+			<span class="hidden-sm hidden-xs">
+			  France
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="{$page.localisation.region_title}" href="{$page.localisation.region_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.region_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.region_text}
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="{$page.localisation.departement_title}" href="{$page.localisation.departement_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.departement_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.departement_text}
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="{$page.localisation.cc_title}" href="{$page.localisation.cc_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.cc_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.cc_text}
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a title="{$page.localisation.commune_title}" href="{$page.localisation.commune_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.commune_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.commune_text}
+			</span>
+		  </a>
+		</li>
+	)
+
+	#bandeau
+	lib.bandeau = COA
+	lib.bandeau {
+	  10 = CONTENT
+	  10 {
+		table = tt_content
+		select.where = colPos = 0
+		select.orderBy = sorting
+		select.pidInList = {$page.bandeau}
+	  }
+	}
+
+	#### INDEXED SEARCH
+	[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Extension/IndexedSearch.txt">
+	[global]
+
+	#search
+	lib.search = COA_INT
+	lib.search {
+		  10 = TEXT
+		  10 {
+			typolink.parameter = {$page.search.settings.PID}
+			typolink.additionalParams = &tx_indexedsearch_pi2[action]=search&tx_indexedsearch_pi2[controller]=Search
+			typolink.returnLast = url
+			wrap = <form id="tx_indexedsearch" action="|" method="post" role="search">
+		  }
+		 
+		  20 = COA
+		  20 {
+			10 = TEXT
+			10.data = GPvar : tx_indexedsearch |sword
+			10.htmlSpecialChars = 1
+			10.wrap = <label for="search">{$page.search.defaultInputLabel}</label><input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required="required" id="search"/>
+		  }
+		 
+		  30 = TEXT
+		  30.value (
+			<input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
+			<input type="hidden" name="tx_indexedsearch_pi2[pointer]" value="0" />
+			<input type="hidden" name="tx_indexedsearch_pi2[ext]" value="0" />
+			<button type="submit" name="tx_indexedsearch_pi2[search][submitButton]">{$page.search.defaultSubmitValue}</button>
+		  )
+		 
+		  40 = TEXT
+		  40.value = </form>
+		}
+		
+	#### Google Site Map
+	tx_ddgooglesitemap.forceStartPid = {$config.googlesitemap.rootUid}
+
+	#### News
+	[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Extension/News.txt">
+	[global]

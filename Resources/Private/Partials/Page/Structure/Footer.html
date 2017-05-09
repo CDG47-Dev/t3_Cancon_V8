@@ -1,0 +1,32 @@
+<footer class="wrapper">
+	<div class="container">
+		<section class="footer-section">
+		        <div class="row">
+		            <div class="col-sm-12">
+		                <f:render partial="Navigation/Footer" arguments="{_all}"/>
+		            </div>
+		        </div>
+		</section>
+		 <f:if condition="{showSitemapFooter}">
+			<section class="subnav-wrap">
+		        <div class="row">
+		            <div class="col-md-12">		
+						<f:render partial="Navigation/Sitemap" arguments="{_all}" />
+					</div>
+            </section>
+		 </f:if>
+		<section class="meta-section">
+		        <div class="row">
+		            <div class="col-md-{f:if(condition: themeCopyright, then:'9', else: '12')} address">
+		                <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '11'}"/>
+		            </div>				
+		            <f:if condition="{themeCopyright}">
+		                <div class="col-md-3 copyright">
+		                    <f:format.html>{themeCopyrightText}</f:format.html>
+		                </div>
+		            </f:if>
+		        </div>
+		</section>
+	</div>
+</footer>
+

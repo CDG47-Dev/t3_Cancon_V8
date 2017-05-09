@@ -1,0 +1,398 @@
+/*
+ * Mainmenu
+ * --------------------------------------------------
+ */
+ .mainmenu0 {
+    background: @mainmenu0-bg;
+}
+.mainmenu1 {
+    background: @mainmenu1-bg;
+}
+.mainmenu2 {
+    background: @mainmenu2-bg;
+}
+.mainmenu3 {
+    background: @mainmenu3-bg;
+}
+.mainmenu4 {
+    background: @mainmenu4-bg;
+}
+.mainmenu5 {
+    background: @mainmenu5-bg;
+}
+.mainmenu6 {
+    background: @mainmenu6-bg;
+}
+.mainmenu7 {
+    background: @mainmenu7-bg;
+}
+.mainmenu8 {
+    background: @mainmenu8-bg;
+}
+.mainmenu0 ul.dropdown-menu {
+    border: 1px solid @mainmenu0-border;
+	background-color: @mainmenu0-dropdown-bg;
+}
+.mainmenu1 ul.dropdown-menu {
+    border: 1px solid @mainmenu1-border;
+	background-color: @mainmenu1-dropdown-bg;
+}
+.mainmenu2 ul.dropdown-menu {
+    border: 1px solid @mainmenu2-border;
+	background-color: @mainmenu2-dropdown-bg;
+}
+.mainmenu3 ul.dropdown-menu {
+    border: 1px solid @mainmenu3-border;
+	background-color: @mainmenu3-dropdown-bg;
+}
+.mainmenu4 ul.dropdown-menu {
+    border: 1px solid @mainmenu4-border;
+	background-color: @mainmenu4-dropdown-bg;
+}
+.mainmenu5 ul.dropdown-menu {
+    border: 1px solid @mainmenu5-border;
+	background-color: @mainmenu5-dropdown-bg;
+}
+.mainmenu6 ul.dropdown-menu {
+    border: 1px solid @mainmenu6-border;
+	background-color: @mainmenu6-dropdown-bg;
+}
+.mainmenu7 ul.dropdown-menu {
+    border: 1px solid @mainmenu7-border;
+	background-color: @mainmenu7-dropdown-bg;
+}
+.mainmenu8 ul.dropdown-menu {
+    border: 1px solid @mainmenu8-border;
+	background-color: @mainmenu8-dropdown-bg;
+}
+.navbar-main{
+	& > li[class*="mainmenu"]{
+		border-radius: @border-radius-mainmenu;
+		& > a{
+		  color : @mainmenu-link;
+		  & .bar{
+			background-color: @mainmenu-bar-bg;
+		  }
+		}
+		.dropdown-menu{
+			& > li{
+				& > a{
+					color : @mainmenu-sub-link;
+					&:hover{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+					&:focus{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}					
+				}
+			}
+			& > .active{
+				& > a{
+					color: @mainmenu-sub-link-hover;
+					background-color: @mainmenu-sub-link-hover-bg;
+					background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+					background-repeat: repeat-x;					
+					&:hover{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+					&:focus{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+				}
+			}
+		}
+		&:hover{
+			& > ul.dropdown-menu{
+				display: block;
+				transition: 0s linear .05s;
+			}
+		}
+	}
+}
+
+/*
+ * Rubrique
+ * --------------------------------------------------
+ */
+ .rubrique0 {
+    .main-section a{
+	  color : @rubrique0-link;
+	  &:hover{
+		color: @rubrique0-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique0-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique0-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique0-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique0-headings;
+	} 
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique0-headings;
+	}	
+}
+.rubrique1 {
+    .main-section a{
+	  color : @rubrique1-link;
+	  &:hover{
+		color: @rubrique1-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique1-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique1-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique1-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique1-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique1-headings;
+	}	
+}
+.rubrique2 {
+    .main-section a{
+	  color : @rubrique2-link;
+	  &:hover{
+		color: @rubrique2-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique2-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique2-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique2-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique2-headings;
+	} 
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique2-headings;
+	}	
+}
+.rubrique3 {
+   .main-section  a{
+	  color : @rubrique3-link;
+	  &:hover{
+		color: @rubrique3-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique3-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique3-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique3-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique3-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique3-headings;
+	}	
+}
+.rubrique4 {
+    .main-section a{
+	  color : @rubrique4-link;
+	  &:hover{
+		color: @rubrique4-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique4-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique4-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique4-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique4-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique4-headings;
+	}	
+}
+.rubrique5 {
+    .main-section a{
+	  color : @rubrique5-link;
+	  &:hover{
+		color: @rubrique5-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique5-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique5-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique5-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique5-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique5-headings;
+	}	
+}
+.rubrique6 {
+    .main-section a{
+	  color : @rubrique6-link;
+	  &:hover{
+		color: @rubrique6-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique6-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique6-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique6-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique6-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique6-headings;
+	}	
+}
+.rubrique7 {
+    .main-section a{
+	  color : @rubrique7-link;
+	  &:hover{
+		color: @rubrique7-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique7-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique7-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique7-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique7-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique7-headings;
+	}	
+}
+.rubrique8 {
+    .main-section a{
+	  color : @rubrique8-link;
+	  &:hover{
+		color: @rubrique8-link-hover;
+	  }
+	}
+	.bloc-encadre{
+		border-color: @rubrique8-bordercadre;
+		& > h1,
+		& >	h2,
+		& >	h3,
+		& >	h4,
+		& >	h5,
+		& >	h6 {
+				border-color: @rubrique8-bordercadre;
+			}
+	}	
+	.bloc-header {
+		& > .bloc-header3::after {
+			background-color: @rubrique8-bloc-header-color;
+	  }
+	}
+	h1, h2, h3, h4, h5, h6{
+		color: @rubrique8-headings;
+	}
+	.nav.nav-sidebar li.active > a{
+		color: @rubrique8-headings;
+	}
+}

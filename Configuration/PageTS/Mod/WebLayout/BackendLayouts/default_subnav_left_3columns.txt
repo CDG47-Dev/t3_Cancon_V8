@@ -1,0 +1,65 @@
+######################################################
+#### BACKENDLAYOUT: DEFAULT SubNavLeft3Columns    ####
+######################################################
+mod {
+    web_layout {
+        BackendLayouts {
+            default_subnav_left_3columns {
+                title = Default, SubNavLeft3Columns
+                config {
+                    backend_layout {
+                        colCount = 6
+                        rowCount = 3
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Subnav
+                                        colspan = 2
+                                    }
+                                     
+                                    2 {
+                                        name = Actualités
+                                        colPos = 0
+                                        rowspan= 2
+                                        colspan = 2
+                                    }
+                                    3 {
+                                        name = Colonne de Droite 
+                                        colPos = 2
+                                        rowspan= 2 
+                                        colspan = 2
+                                    }
+                                   
+                                    
+                                }
+                            }
+                            2 {
+                                columns {
+                                    1 {
+                                        name = Contenu Gauche
+                                        colPos = 1
+                                        colspan = 2
+                                      }
+                                   }
+                              }
+
+                           3 {
+                                columns {
+                                    2 {
+                                        name = Pied de Page
+                                        colPos  = 11
+                                        colspan = 6
+                                    }
+                                }
+
+
+                            }
+                    }
+}
+                }
+                icon = EXT:bootstrap_package/Resources/Public/Images/BackendLayouts/default_subnavigation_left_2_columns.gif
+            }
+        }
+    }
+}

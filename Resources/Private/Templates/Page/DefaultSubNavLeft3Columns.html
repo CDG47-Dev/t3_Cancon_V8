@@ -1,0 +1,33 @@
+<f:layout name="Default"/>
+<f:section name="Main">
+
+        <div class="row">          
+          <main class="col-md-6 col-md-push-3" role="main">
+              <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+          </main>
+          <div class="col-md-3 col-md-pull-6 subnav-wrap">
+            
+            <div id="navLeft" class="col-md-12">
+              <f:render partial="Navigation/Subnavigation" arguments="{_all}" />
+            </div>
+            
+            <div id="contenuLeft" class="col-md-12">
+              <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid:'{data.uid}', colPos: '1'}"/>
+            </div>
+          </div>		  
+            
+          <div class="col-md-3">
+			 <f:if condition="{showSearchRight}">
+			 	<f:then>
+				  <div class="search-right">
+					 <f:cObject typoscriptObjectPath="lib.search"/>
+				  </div>
+				 </f:then>
+			 </f:if>
+			  <div class="subcontent-wrap">
+                   <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '2'}"/>
+			  </div>
+          </div>
+        </div>
+
+</f:section>
